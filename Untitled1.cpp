@@ -4,9 +4,9 @@
 using namespace std;							//for C++ cout 
 //+-*/   1234    
 unsigned long int xx[1001];    
-int x=1;    									//指定 x=1 
-int pd;    										//指定一個變數 pd 
-int f1(int a, int b, int c, int d)				//指定4個整變數 a b c d
+int x=1;    									//宣告 x=1 
+int pd;    										//宣告一個變數 pd 
+int f1(int a, int b, int c, int d)				//宣告 4 個整變數 a b c d
 
 {
 	int sum;    
@@ -133,7 +133,7 @@ switch (j)
     }    
     return 0;    
 }    
-int f2(int a, int b, int c, int d)    			//指定4個整數  a b c d 
+int f2(int a, int b, int c, int d)    			//宣告4個整數  a b c d 
 {    
     int sum = 0;    
     sum = f1(a, b, c, d) + f1(a, b, d, c) + f1(a, c, b, d) + f1(a, c, d, b) + f1(a, d, b, c) + f1(a, d, c, b);    
@@ -148,10 +148,11 @@ int f2(int a, int b, int c, int d)    			//指定4個整數  a b c d
 }    
 int main()    
 {    
-    int a, b, c, d;    							//指定四個整數 a b c d  
+    int a, b, c, d;    							//宣告四個整數 a b c d  
     int sum;        
     cout << "plz input four numbers" << endl;									//I add
-    cin >> a >> b >> c >> d;    
+    cout << "first number = " ; 
+	cin >> a >> b >> c >> d;    
     sum = f2(a, b, c, d) + f2(b, a, c, d) + f2(c, a, b, d) + f2(d, a, b, c); 	// A+B+C+D 
     if (sum == 0)    															//if sum = 0
     {    
